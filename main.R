@@ -1,5 +1,5 @@
 # Lazaros Spaias
-# 10/1/2016
+# 10th of January 2016
 library(raster)
 
 source('R/ageCalculator.R')
