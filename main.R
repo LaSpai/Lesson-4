@@ -1,19 +1,8 @@
 # Lazaros Spaias
 # 10th of January 2016
-library(raster)
+#Lesson-4, Leap Year Function
 
-source('R/ageCalculator.R')
-source('R/HelloWorld.R')
-source('R/minusRaster.R')
-
-
-HelloWorld('john')
-ageCalculator(2009)
-
-# import dataset
-r <- raster(system.file("external/rlogo.grd", package="raster")) 
-r2 <- r 
-# Filling the rasterLayer with new values.
-r2[] <- (1:ncell(r2)) / 10
-# Performs the calculation
-r3 <- minusRaster(r, r2) 
+leap <- function (year) { if (year %% 4) {return("This is a common year")} 
+                          if (year%% 100 == F) {return("This is a leap year")}
+                          if (year%%400== F) {return("This is a common year")}
+                          else{return("This is a leap year")}}
